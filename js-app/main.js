@@ -3,26 +3,6 @@ const url = "https://localhost:44373/api/beanvariety/";
 const button = document.querySelector("#run-button");
 const beanBag = document.querySelector("#bean-bag")
 
-// button.addEventListener("click", () => {
-//     getAllBeanVarieties()
-//     .then(beanVarieties => {
-//             let beanBag = ""
-            
-//             beanVarieties.forEach(bean => {
-//                 beanBag +=`
-//                     <div>
-//                         <p><b>BEAN NAME</b>: ${bean.name}</p>
-//                         <p><b>REGION</b>: ${bean.region}</p>
-//                         <p><b>NOTES</b>: ${bean.notes}</p>
-//                      </div>
-//                      <hr />
-//                 `
-//             console.log(beanVarieties);
-//             return beanBag
-//         })
-//     })
-// })
-
 button.addEventListener("click", () => {
     getAllBeanVarieties()
         .then(beanVarieties => {
@@ -47,3 +27,24 @@ function BeanCard(beanObj) {
 function getAllBeanVarieties() {
     return fetch(url).then(resp => resp.json());
 }
+
+//this code isn't quite right. Ignore.
+// button.addEventListener("click", () => {
+//     getAllBeanVarieties()
+//     .then(beanVarieties => {
+//             let beanBag = ""
+            
+//             beanVarieties.forEach(bean => {
+//                 beanBag +=`
+//                     <div>
+//                         <p><b>BEAN NAME</b>: ${bean.name}</p>
+//                         <p><b>REGION</b>: ${bean.region}</p>
+//                         <p><b>NOTES</b>: ${bean.notes}</p>
+//                      </div>
+//                      <hr />
+//                 `
+//             console.log(beanVarieties);
+//             return beanBag
+//         })
+//     })
+// })
